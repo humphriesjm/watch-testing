@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="6724" systemVersion="14E7f" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
@@ -10,6 +10,28 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="GoRunningInterfaceController">
                     <items>
+                        <button alignment="left" id="j4l-MG-rSr">
+                            <group key="contentGroup" width="1" alignment="left" layout="vertical" id="KrC-1a-OpZ">
+                                <items>
+                                    <label alignment="left" text="Selected Track" minimumScaleFactor="0.80000000000000004" id="gxc-CH-tzo">
+                                        <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                    </label>
+                                    <group width="1" alignment="left" id="IHo-3J-ZJJ">
+                                        <items>
+                                            <label alignment="right" text="0.25 mi" minimumScaleFactor="0.75" id="YwE-dA-i0X">
+                                                <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                            </label>
+                                            <label alignment="left" text="Gym" minimumScaleFactor="0.80000000000000004" id="LK7-MR-4fi">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="4" top="2" bottom="2"/>
+                                    </group>
+                                </items>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <edgeInsets key="margins" left="4" right="0.0" top="0.0" bottom="0.0"/>
+                            </group>
+                        </button>
                         <button width="1" alignment="left" title="Start Run" id="f3d-1k-k0C">
                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <color key="backgroundColor" red="0.027989936369999999" green="0.63811947599999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,7 +104,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="367" y="221"/>
+            <point key="canvasLocation" x="329" y="212"/>
         </scene>
         <!--Glance Interface Controller-->
         <scene sceneID="rjY-Ar-IMT">
@@ -96,6 +118,44 @@
                 </glanceController>
             </objects>
             <point key="canvasLocation" x="164" y="514"/>
+        </scene>
+        <!--Run Log-->
+        <scene sceneID="sp4-0K-C9y">
+            <objects>
+                <controller title="Run Log" id="Fxm-5H-rlp" customClass="RunLogInterfaceController">
+                    <items>
+                        <table alignment="left" id="RWu-yB-4LI">
+                            <items>
+                                <tableRow id="gsb-tU-qHw" customClass="RunLogRowController" customModule="LapTap_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="73.5" alignment="left" id="pQx-eJ-yDW">
+                                        <items>
+                                            <group height="40" alignment="left" layout="vertical" id="rtq-4k-s5W">
+                                                <items>
+                                                    <label alignment="left" text="Dist" id="QVc-8n-e7z">
+                                                        <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                                                    </label>
+                                                    <label alignment="left" text="Date" id="LOZ-5h-sBJ">
+                                                        <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <label alignment="right" text="Duration" id="rO7-FO-rcO">
+                                                <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                                            </label>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="dateLabel" destination="LOZ-5h-sBJ" id="sgR-0e-IXk"/>
+                                        <outlet property="distanceLabel" destination="QVc-8n-e7z" id="VWk-XS-VkD"/>
+                                        <outlet property="durationLabel" destination="rO7-FO-rcO" id="YPN-4y-ywb"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="519" y="212"/>
         </scene>
     </scenes>
 </document>
