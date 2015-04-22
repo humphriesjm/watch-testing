@@ -4,10 +4,38 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Glance - LapTap WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>LapTap WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>LapTap.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>0136EBF11AE693660068B9E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0136EC0A1AE693660068B9E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0136EC2C1AE693950068B9E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
